@@ -33,6 +33,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/empty_dice"/>
+        app:srcCompat="@drawable/empty_dice"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
