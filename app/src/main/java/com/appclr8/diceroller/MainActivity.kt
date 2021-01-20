@@ -18,21 +18,18 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.rollButton.setOnClickListener(object : View.OnClickListener{
-            override fun onClick(v: View?) {
-                rollDice()
-            }
-        })
+        binding.rollButton.setOnClickListener { rollDice() }
     }
 
     private fun rollDice() {
+        val imageView = binding.imageView
         when (Random().nextInt(6) + 1){
-            1 -> binding.imageView.setImageResource(R.drawable.dice_1)
-            2 -> binding.imageView.setImageResource(R.drawable.dice_2)
-            3 -> binding.imageView.setImageResource(R.drawable.dice_3)
-            4 -> binding.imageView.setImageResource(R.drawable.dice_4)
-            5 -> binding.imageView.setImageResource(R.drawable.dice_5)
-            6 -> binding.imageView.setImageResource(R.drawable.dice_6)
+            1 -> imageView.setImageResource(R.drawable.dice_1)
+            2 -> imageView.setImageResource(R.drawable.dice_2)
+            3 -> imageView.setImageResource(R.drawable.dice_3)
+            4 -> imageView.setImageResource(R.drawable.dice_4)
+            5 -> imageView.setImageResource(R.drawable.dice_5)
+            6 -> imageView.setImageResource(R.drawable.dice_6)
         }
     }
 
