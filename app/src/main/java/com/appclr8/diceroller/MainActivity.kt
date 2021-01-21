@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun rollDice() {
         val imageView = binding.imageView
+        
         when (Random().nextInt(6) + 1){
             1 -> imageView.setImageResource(R.drawable.dice_1)
             2 -> imageView.setImageResource(R.drawable.dice_2)
